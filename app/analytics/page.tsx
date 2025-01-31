@@ -1,9 +1,11 @@
 import PageContent from "@/components/PageContent";
 
-export default function Home() {
+const page = () => {
   return (
     <PageContent>
-        Home
+      analytics
     </PageContent>
-  );
+  )
 }
+
+export default page

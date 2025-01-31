@@ -1,9 +1,11 @@
 import PageContent from "@/components/PageContent";
 
-export default function Home() {
+const page = () => {
   return (
     <PageContent>
-        Home
+      Sales
     </PageContent>
-  );
+  )
 }
+
+export default page
