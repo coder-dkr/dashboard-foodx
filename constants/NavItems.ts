@@ -3,21 +3,21 @@ export const NavItems : NavItem[] = [
     {
         name : 'Home',
         icon : '/Home.svg' ,
-        route : '/'
+        route : '/dashboard'
     },
     {
         name : 'Sales',
         icon : '/sales.svg' ,
-        route : '/sales'
+        route : '/dashboard/sales'
     },
     {
         name : 'Analytics',
         icon : '/analy.svg' ,
-        route : '/analytics'
+        route : '/dashboard/analytics'
     },
     {
         name : 'Orders',
         icon : '/orders.svg' ,
-        route : '/orders'
+        route : '/dashboard/orders'
     }
 ]

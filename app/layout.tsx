@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SideNav from "@/components/SideNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FoodX Dashboard",
-  description: "FoodX Dashboard is used by Admin to get the sales , users , orders analysis",
+  description: "FoodX Dashboard",
 };
 
 export default function RootLayout({
@@ -26,10 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        suppressContentEditableWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
+       suppressContentEditableWarning
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SideNav/>
         {children}
       </body>
     </html>

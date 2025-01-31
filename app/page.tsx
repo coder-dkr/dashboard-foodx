@@ -1,9 +1,6 @@
-import PageContent from "@/components/PageContent";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <PageContent>
-        Home
-    </PageContent>
-  );
+export default function page() {
+  redirect("/dashboard");
+  return <></>;
 }
