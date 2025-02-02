@@ -1,5 +1,5 @@
 "use client"
-import { PieChart, Pie, Tooltip, Cell, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 
 // Dummy Data for Preferred Food by Most Users
 const data01 = [
