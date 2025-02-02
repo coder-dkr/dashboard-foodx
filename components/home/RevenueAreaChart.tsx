@@ -7,7 +7,7 @@ import {
 import { revenueData } from "@/constants";
 
 const RevenueAreaChart: React.FC = () => {
-  const [isSmallScreen , setIsSmallScreen] = R.useState(window.innerWidth < 640)
+  const [isSmallScreen , setIsSmallScreen] = R.useState(false)
 
    R.useEffect(() => {
         const handleResize = () => setIsSmallScreen(window.innerWidth < 640);

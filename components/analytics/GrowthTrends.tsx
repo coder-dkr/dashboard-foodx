@@ -7,7 +7,7 @@ import {ResponsiveContainer,  AreaChart, Area, CartesianGrid, XAxis,Tooltip,YAxi
 const GrowthTrends = () => {
 
 
-const [isSmallScreen, setIsSmallScreen] = R.useState(window.innerWidth < 640);
+const [isSmallScreen, setIsSmallScreen] = R.useState(false);
 
   R.useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 640);

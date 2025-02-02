@@ -7,7 +7,7 @@ import { analyticsData } from "@/constants";
 
 const AnalyticsAreaChart: React.FC = () => {
 
-  const [isSmallScreen, setIsSmallScreen] = R.useState(window.innerWidth < 640);
+  const [isSmallScreen, setIsSmallScreen] = R.useState(false);
 
   R.useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
@@ -39,13 +39,12 @@ const AnalyticsAreaChart: React.FC = () => {
             </linearGradient>
           </defs>
 
-          {/* Chart Elements */}
           <XAxis dataKey="month" />
           <YAxis hide={isSmallScreen} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
 
-          {/* Area Chart for Traffic */}
+         
           <Area
             type="monotone"
             dataKey="traffic"
@@ -53,7 +52,6 @@ const AnalyticsAreaChart: React.FC = () => {
             fillOpacity={1}
             fill="url(#colorTraffic)"
           />
-          {/* Area Chart for Orders */}
           <Area
             type="monotone"
             dataKey="orders"

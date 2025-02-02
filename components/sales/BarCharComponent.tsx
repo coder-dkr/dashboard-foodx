@@ -7,7 +7,7 @@ import { chartData } from "@/constants";
 
 const SalesDashboard = () => {
 
-  const [isSmallScreen, setIsSmallScreen] = R.useState(window.innerWidth < 640);
+  const [isSmallScreen, setIsSmallScreen] = R.useState(false);
 
   const combinedData = chartData.salesBarChart.map((salesEntry) => {
     const revenueEntry = chartData.revenueLineChart.find((rev) => rev.month === salesEntry.month) || {revenue : 0};
