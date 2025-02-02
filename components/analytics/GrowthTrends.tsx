@@ -1,28 +1,27 @@
 "use client"
+import { chartData } from '@/constants';
+import * as R from 'react'
+import {ResponsiveContainer,  AreaChart, Area, CartesianGrid, XAxis,Tooltip,YAxis } from "recharts";
 
-import {ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area, CartesianGrid, XAxis,Tooltip,YAxis } from "recharts";
-import { chartData } from "@/constants"
 
 const GrowthTrends = () => {
 
-const COLORS = ["#FF5733", "#33FF57", "#3357FF", "#FF33A8"];
+
+const [isSmallScreen, setIsSmallScreen] = R.useState(window.innerWidth < 640);
+
+  R.useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+
   return (
     <div>
-        <div className="flex flex-col items-center">
-        <h3 className="text-xl font-medium text-gray-600 mb-4">Most Preferred Food Categories</h3>
-        <PieChart width={250} height={250}>
-          <Pie data={chartData.categoryPieChart} dataKey="value" cx="50%" cy="50%" outerRadius={80} label>
-            {chartData.categoryPieChart.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index]}  />
-            ))}
-          </Pie>
-          
-        </PieChart>
-      </div>
 
-      {/* Customer Growth - Area Chart */}
-      <div>
-        <h3 className="text-xl font-medium text-gray-600 mb-4">Customer Growth Over Time</h3>
+      <div className='bg-white  p-6 rounded-md shadow-md'>
+        <h3 className="text-xl font-medium text-gray-600 mb-4">Customer Growth Over last {chartData.customerGrowth?.length} Months</h3>
         <ResponsiveContainer width="100%" height={300}>
           <AreaChart data={chartData.customerGrowth} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
@@ -32,7 +31,7 @@ const COLORS = ["#FF5733", "#33FF57", "#3357FF", "#FF33A8"];
               </linearGradient>
             </defs>
             <XAxis dataKey="month" />
-            <YAxis />
+            <YAxis hide={isSmallScreen} />
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip />
             <Area type="monotone" dataKey="customers" stroke="#82ca9d" fillOpacity={1} fill="url(#colorCustomers)" />

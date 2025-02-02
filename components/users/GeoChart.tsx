@@ -1,18 +1,13 @@
 "use client"
 import { Chart } from "react-google-charts";
-
-const geoData = [
-  ["Country", "Users"],
-  ["United States", 1000],
-  ["India", 850],
-  ["Brazil", 600],
-  ["Germany", 450],
-  ["United Kingdom", 400],
-  ["France", 350],
-];
+import { geoData } from "@/constants";
 
 const GeoChart: React.FC = () => {
   return (
+    <div>
+    <h3 className="text-lg text-gray-600">
+      Geo chart for all users
+    </h3>
     <Chart
       chartType="GeoChart"
       width="100%"
@@ -25,6 +20,7 @@ const GeoChart: React.FC = () => {
         defaultColor: "#6c757d",
       }}
     />
+    </div>
   );
 };
 

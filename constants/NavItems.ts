@@ -19,5 +19,10 @@ export const NavItems : NavItem[] = [
         name : 'Orders',
         icon : '/orders.svg' ,
         route : '/dashboard/orders'
+    },
+    {
+        name : 'Users',
+        icon : '/allusers.svg' ,
+        route : '/dashboard/users'
     }
 ]

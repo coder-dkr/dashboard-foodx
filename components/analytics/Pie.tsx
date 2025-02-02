@@ -1,33 +1,17 @@
 "use client"
 import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
+import { PreferredFood } from "@/constants";
 
-// Dummy Data for Preferred Food by Most Users
-const data01 = [
-  { name: "Pizza", value: 35 },
-  { name: "Burger", value: 25 },
-  { name: "Pasta", value: 20 },
-  { name: "Sushi", value: 10 },
-  { name: "Salad", value: 10 },
-];
 
-const data02 = [
-  { name: "Pizza", value: 45 },
-  { name: "Burger", value: 30 },
-  { name: "Pasta", value: 15 },
-  { name: "Sushi", value: 5 },
-  { name: "Salad", value: 5 },
-];
-
-// Pie Chart Component
 const PreferredFoodPieChart: React.FC = () => {
   return (
-    <div className="pie-chart bg-white p-6 rounded-md shadow-md">
-      <h3 className="text-xl font-medium text-gray-600 mb-4">Preferred Food by Most Users</h3>
-      <ResponsiveContainer width="100%" height={300}>
+   <>
+      <h3 className="text-xl font-medium text-gray-600 mb-4 text-left w-full">Most Preferred Food Categories</h3>
+      <ResponsiveContainer width={300} height={250}>
         <PieChart>
-          {/* Outer Pie for Food Preference */}
+         
           <Pie
-            data={data01}
+            data={PreferredFood.data1}
             dataKey="value"
             nameKey="name"
             cx="50%"
@@ -38,7 +22,7 @@ const PreferredFoodPieChart: React.FC = () => {
           />
           {/* Inner Pie for Second Set of Data */}
           <Pie
-            data={data02}
+            data={PreferredFood.data2}
             dataKey="value"
             nameKey="name"
             cx="50%"
@@ -52,7 +36,7 @@ const PreferredFoodPieChart: React.FC = () => {
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>
-    </div>
+    </>
   );
 };
 

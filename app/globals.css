@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  /* background-color: rgb(255, 243, 220); */
-  background-color: rgb(85, 62, 255);
+
+.custom-gradient {
+  @apply absolute top-0 z-[-2] h-screen w-screen rotate-180 transform;
+  background: linear-gradient(90deg, rgba(230,128,7,1) 0%, rgba(253,203,29,1) 50%, rgba(230,128,7,1) 97%);
 }
 
+
+.smoothScroll {
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
+}
+
+/* body {
+   background-color: rgb(255, 191, 0);
+} */
 .h-class-sm {
   height: calc(100vh - 24px);
 }

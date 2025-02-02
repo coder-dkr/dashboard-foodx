@@ -1,11 +1,20 @@
 "use client"
 
-import React from "react";
+import * as R from "react";
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
-import { analyticsData } from "@/constants/dummyData";
+import { analyticsData } from "@/constants";
 
 
 const AnalyticsAreaChart: React.FC = () => {
+
+  const [isSmallScreen, setIsSmallScreen] = R.useState(window.innerWidth < 640);
+
+  R.useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className="area-chart bg-white p-6 rounded-md shadow-md">
       <h3 className="text-xl font-medium text-gray-600 mb-4">Website Analytics</h3>
@@ -32,7 +41,7 @@ const AnalyticsAreaChart: React.FC = () => {
 
           {/* Chart Elements */}
           <XAxis dataKey="month" />
-          <YAxis />
+          <YAxis hide={isSmallScreen} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
 

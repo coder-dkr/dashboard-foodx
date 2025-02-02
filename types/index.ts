@@ -30,7 +30,7 @@ export interface PageContentProps {
   }
 export interface KPICARD { 
     title: string; 
-    value: string | number ;
+    value: number | string;
     icon : string , 
     view : string;
 }

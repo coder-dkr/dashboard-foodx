@@ -18,6 +18,10 @@ export default function RootLayout({
         suppressContentEditableWarning
         className={`flex`}
       >
+   <div className="absolute top-0 z-[-2] h-screen w-screen custom-gradient"></div>
+
+
+
         <SideNav/>
         <PageContent>
           <Header/>

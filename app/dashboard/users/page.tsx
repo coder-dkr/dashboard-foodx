@@ -1,9 +1,11 @@
-import Sales from '@/components/sales'
+import AllUsers from '@/components/users'
 import React from 'react'
 
 const page = () => {
   return (
-   <Sales />
+    <div>
+      <AllUsers />
+    </div>
   )
 }
 

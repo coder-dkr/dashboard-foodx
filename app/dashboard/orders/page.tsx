@@ -1,10 +1,10 @@
-import React from 'react'
+import Orders from '@/components/orders'
+
+
 
 const page = () => {
   return (
-    <div>
-      ORDERS
-    </div>
+    <Orders />
   )
 }
 

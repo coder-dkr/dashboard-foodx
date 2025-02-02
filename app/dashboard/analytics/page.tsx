@@ -1,4 +1,4 @@
-import Analytics from '@/components/analytics/Analytics'
+import Analytics from '@/components/analytics'
 import React from 'react'
 
 const page = () => {

@@ -34,9 +34,9 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full sticky top-0 bg-white backdrop-blur-xl border-b border-gray-800 bg-background z-50">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-        <div className="relative flex w-full max-w-md items-center">
+    <header className="w-full sticky top-0 bg-white  backdrop-blur-xl border-b border-gray-800 z-50">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-center sm:justify-between px-4">
+        <div className=" relative hidden sm:flex w-full max-w-md items-center">
           <input
             type="search"
             placeholder="Search..."
@@ -74,7 +74,7 @@ export default function Header() {
           </button>
 
           {/* Notifications */}
-          <button className="relative rounded-full p-2  ">
+          <button className="relative rounded-full p-2 hidden sm:block  ">
             <BellIcon className="h-4 w-4" />
             {notifications > 0 && (
               <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] text-white">
