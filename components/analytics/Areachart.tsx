@@ -7,7 +7,7 @@ import { analyticsData } from "@/constants";
 
 const AnalyticsAreaChart: React.FC = () => {
 
-  const [isSmallScreen, setIsSmallScreen] = R.useState(false);
+  const [isSmallScreen, setIsSmallScreen] = R.useState(typeof window !== "undefined" ? window.innerWidth < 640 : false);
 
   R.useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
