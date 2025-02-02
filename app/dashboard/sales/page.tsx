@@ -1,10 +1,9 @@
-import PageContent from "@/components/PageContent";
+import Sales from '@/components/sales/Sales'
+import React from 'react'
 
 const page = () => {
   return (
-    <PageContent>
-      Sales
-    </PageContent>
+   <Sales />
   )
 }
 

@@ -1,10 +1,10 @@
-import PageContent from "@/components/PageContent";
+import React from 'react'
 
 const page = () => {
   return (
-    <PageContent>
-      <h1>ORDERS</h1>
-    </PageContent>
+    <div>
+      ORDERS
+    </div>
   )
 }
 

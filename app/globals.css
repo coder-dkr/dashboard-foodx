@@ -3,5 +3,14 @@
 @tailwind utilities;
 
 body {
-  background-color: rgba(255, 198, 92, 0.89);
+  /* background-color: rgb(255, 243, 220); */
+  background-color: rgb(85, 62, 255);
+}
+
+.h-class-sm {
+  height: calc(100vh - 24px);
+}
+
+.noscroll::-webkit-scrollbar {
+  width:  0;
 }

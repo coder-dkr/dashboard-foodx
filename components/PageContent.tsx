@@ -2,8 +2,8 @@ import { PageContentProps } from "@/types";
 
 const PageContent: React.FC<PageContentProps> = ({ children, className }) => {
   return (
-    <div
-      className={`p-8 ml-[20rem] right-7 bg-gradient-to-b from-white via-white to-white/50 shadow-lg shadow-white/20 absolute left-4 top-6 bottom-0 rounded-t-[2rem] ${className}`}
+    <div 
+      className={`p-8 pt-0 w-full h-screen overflow-y-scroll  sm:w-auto sm:h-auto min-h-auto sm:ml-20 lg:ml-[17.5rem] sm:right-5 lg:right-7 bg-white shadow-lg sm:absolute sm:left-4 sm:top-6 sm:bottom-0 rounded-t-[2rem] ${className} noscroll`}
     >
       {children}
     </div>

@@ -1,9 +1,10 @@
-import PageContent from "@/components/PageContent";
+import Home from "@/components/home/Home";
+import React from "react";
 
-export default function Home() {
+const page = () => {
   return (
-    <PageContent>
-        Dashboard
-    </PageContent>
+      <Home />
   );
-}
+};
+
+export default page;

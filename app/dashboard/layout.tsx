@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import SideNav from "@/components/SideNav";
+import PageContent from "@/components/PageContent";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "FoodX Dashboard",
@@ -18,7 +19,10 @@ export default function RootLayout({
         className={`flex`}
       >
         <SideNav/>
-        {children}
+        <PageContent>
+          <Header/>
+          {children}
+        </PageContent>
       </section>
 
   );
